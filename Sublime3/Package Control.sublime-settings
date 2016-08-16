@@ -5,7 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"BracketHighlighter",
 		"Colorsublime",
-		"Git"
+		"DocBlockr",
+		"Git",
+		"SublimeLinter"
 	]
 }
