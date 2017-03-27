@@ -16,6 +16,9 @@ alias ls='ls -lhAG'
 
 ## Utility
 
+# Open new iTerm2 tab in current directory
+alias tab="open . -a iterm"
+
 # Sets iTerm tab name
 title() { echo -e "\033];$1\007"; } 
 
