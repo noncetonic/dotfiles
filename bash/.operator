@@ -1,0 +1,61 @@
+########################
+# PS1 String           #
+########################
+export PS1="\[$(tput bold)\]\[\033[38;5;13m\]\t\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;1m\]@\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;14m\]\\$\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
+########################
+# Aliases              #             
+########################
+
+# Aesthetic Tweaks
+
+## Command Output Formatting
+
+# (G) Colorized (l)long format with (h) unit suffixes (A) omitting '.' and '..' directories from output 
+alias ls='ls -lhAG' 
+
+## Utility
+
+# Sets iTerm tab name
+title() { echo -e "\033];$1\007"; } 
+
+# Toggle desktop icon visibility based on preference
+toggleDesktop() {
+	# Set to 1 to show desktop icons.
+	VISIBILITY=0
+
+	# Command template
+	SETVISIBILITY="defaults write com.apple.finder CreateDesktop"
+
+	# Let's get current status 
+	STATUS="$(if defaults read com.apple.finder CreateDesktop | grep -q "false"; then echo "0"; else echo "1"; fi)"
+	# Check if state matches and toggle otherwise
+	if [ $VISIBILITY -eq $STATUS ]
+	then
+		: ;
+	else
+		if [ $VISIBILITY -eq "0" ]
+		then
+			$SETVISIBILITY false ;
+		else
+			$SETVISIBILITY true ;
+			
+		fi
+
+		killall Finder;
+	fi
+}
+
+# Open Sublime Text from terminal
+alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+########################
+# OSX Setting Tweaks   #
+########################
+ 
+# Ensure function keys behave normally
+if defaults read "Apple Global Domain" "com.apple.keyboard.fnState" |grep -q "1"; then : ; else defaults write -g com.apple.keyboard.fnState -bool true; fi
+
+########################
+# Autorun on shell     #
+########################
+toggleDesktop
