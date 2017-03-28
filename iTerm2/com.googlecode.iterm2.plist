@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
-	<true/>
+	<false/>
 	<key>AllowClipboardAccess</key>
 	<false/>
 	<key>AnimateDimming</key>
@@ -246,10 +246,12 @@
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
-	<true/>
+	<false/>
 	<key>DimOnlyText</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
+	<false/>
+	<key>DisableWindowSizeSnap</key>
 	<false/>
 	<key>EnableRendezvous</key>
 	<false/>
@@ -295,6 +297,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/dotfiles/iTerm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -335,16 +339,22 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>779 227 445 329 0 0 1440 878 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>171 233 735 382 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 373 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 76 599 519 0 0 1440 877 </string>
+	<string>563 131 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>286 392 796 473 0 0 1440 878 </string>
+	<string>371 259 1018 447 0 0 1440 878 </string>
+	<key>NSWindow Frame com.apple.typography_panel_Courier</key>
+	<string>246 484 260 76 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 52 1438 826 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>579 406 570 429 0 0 1440 878 </string>
+	<string>1440 7 1200 1891 1440 0 1200 1898 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>197 47 570 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -366,6 +376,8 @@
 			<string></string>
 			<key>AWDS Window Option</key>
 			<string>No</string>
+			<key>Allow Title Reporting</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -538,10 +550,12 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Blend</key>
+			<real>0.050000000000000003</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<false/>
 			<key>Bold Color</key>
@@ -600,12 +614,14 @@
 			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
+			<key>Disable Printing</key>
+			<false/>
 			<key>Disable Smcup Rmcup</key>
 			<false/>
 			<key>Disable Window Resizing</key>
 			<true/>
 			<key>Flashing Bell</key>
-			<true/>
+			<false/>
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -942,12 +958,16 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>Courier 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
+			<key>Prevent Opening in a Tab</key>
+			<false/>
 			<key>Prompt Before Closing 2</key>
+			<false/>
+			<key>Reduce Flicker</key>
 			<false/>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
@@ -981,6 +1001,8 @@
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
+			<key>Send Terminal Generated Alerts</key>
+			<false/>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
@@ -992,7 +1014,9 @@
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
-			<string>xterm</string>
+			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>1</integer>
 			<key>Transparency</key>
 			<real>0.45867464866863911</real>
 			<key>Unlimited Scrollback</key>
@@ -1001,6 +1025,10 @@
 			<false/>
 			<key>Use Bright Bold</key>
 			<true/>
+			<key>Use Cursor Guide</key>
+			<false/>
+			<key>Use Non-ASCII Font</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -1085,7 +1113,7 @@
 	<key>RightOption</key>
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
@@ -1093,7 +1121,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-27T02:29:48Z</date>
+	<date>2017-03-28T04:27:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1105,7 +1133,7 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.40000000596046448</real>
+	<real>0.34107321714743588</real>
 	<key>StealKeyFocus</key>
 	<true/>
 	<key>SwitchTabModifier</key>
@@ -1140,6 +1168,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>3.0.15</string>
 </dict>
