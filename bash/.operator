@@ -15,8 +15,8 @@ export PS1="\[$(tput bold)\]\[\033[38;5;13m\]\t\[$(tput sgr0)\]\[$(tput sgr0)\]\
 # alias ls='ls -lhAGF' 
 # Leverage GNU ls to get access to LS_COLORS vis dircolors
 eval $( gdircolors -b $HOME/.dir_colors )
-alias dir='dir --color'
-alias ls='ls -lhAF --color'
+alias dir='gdir --color'
+alias ls='gls -lhAF --color'
 
 ## Utility
 
