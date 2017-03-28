@@ -241,7 +241,7 @@ STICKY_OTHER_WRITABLE 48;5;180;38;5;234
 .gitmodules 00;38;5;248
 
 # logs and backups
-.log 00;38;5;234
+.log 00;38;5;234;01;47
 .bak 00;38;5;234
 .aux 00;38;5;234
 .toc 00;38;5;234
